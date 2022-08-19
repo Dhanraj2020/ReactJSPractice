@@ -1,8 +1,9 @@
 import React from "react";
-function User() {
+function User(props) {
   return (
     <div>
-      <h1>Hello User</h1>
+      <h1>User Component</h1>
+      <button onClick={props.data}>Call Function</button>
     </div>
   );
 }

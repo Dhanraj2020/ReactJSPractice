@@ -6,12 +6,14 @@ import InputBox from "./components/test/InputBox";
 import HideShow from "./components/test/HideShow";
 import FormHandling from "./components/test/FormHandling";
 import ConditionRender from "./components/test/ConditionRender";
+import BasicFormValidation from "./components/test/BasicFormValidation";
+import User from "./components/test/User";
 
 function App() {
   const [name, setName] = useState("Anil");
 
-  function apple() {
-    alert("hello");
+  function getData() {
+    alert("Hello from app component");
   }
   const handleClick = () => {
     setName("Sidhu");
@@ -25,6 +27,8 @@ function App() {
   return (
     <div className="App">
       <h1>Props in React :)</h1>
+      <User data={getData} />
+      <Student data={getData} />
       <Student name={name} />
       {/* <button
         onClick={() => {
@@ -41,6 +45,7 @@ function App() {
       <HideShow />
       <FormHandling />
       <ConditionRender />
+      <BasicFormValidation />
     </div>
   );
 }
